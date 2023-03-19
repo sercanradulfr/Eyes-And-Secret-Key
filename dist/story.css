@@ -1,0 +1,131 @@
+.overlay {
+  display: none;
+  opacity: 0;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vw;
+  z-index: 100;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.popup {
+  display: none;
+  opacity: 0;
+  width: 50vh; height: 50vh;
+  min-width: 300px;
+  min-height: 300px;
+  position: fixed;
+  top: 25vh; left: 40%;
+  z-index: 101;
+  transition: opacity .3s;
+
+  background-color: white;
+  padding: 60px 20px 40px;
+  border-radius: 6px;
+}
+
+.open {
+  display: block;
+  opacity: 1;
+}
+
+/* Popup content */
+
+.for-call-popup {
+  display: none;
+}
+
+/* Closing button inside popup */
+
+.popup-close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 32px;
+  height: 32px;
+  opacity: .3;
+  cursor: pointer;
+  z-index: 102;
+}
+
+.popup-close-btn:hover {
+  opacity: 1;
+}
+
+.popup-close-btn:before, .popup-close-btn:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+.popup-close-btn:before {
+  transform: rotate(45deg);
+}
+
+.popup-close-btn:after {
+  transform: rotate(-45deg);
+}
+
+/* Other styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato';
+  color: #ffffff;
+  background: url('https://images.pexels.com/photos/695644/pexels-photo-695644.jpeg?cs=srgb&dl=pexels-rahul-695644.jpg&fm=jpg');
+}
+
+.main {
+  width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: black;
+  border-radius: 6px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+h3 {
+  padding-bottom: 15px;
+}
+
+button {
+  user-select: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: navy;
+  color: white;
+  padding: 12px 24px;
+  margin-right: 10px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+label {
+  display: block;
+
+  div {
+    display: inline-block;
+    width: 70px;
+  }
+
+  input {
+    padding: 6px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+  }
+}
